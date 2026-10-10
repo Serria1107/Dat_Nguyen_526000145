@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CINÉVERSE — Premium cinematic movie discovery experience with cinematic hero, smart filters, and rich movie detail modal."
+    />
+    <meta property="og:title" content="CINÉVERSE | Cinematic Movie Discovery" />
+    <meta property="og:description" content="Khám phá phim điện ảnh với giao diện điện ảnh cao cấp." />
+    <meta property="og:type" content="website" />
+    <title>CINÉVERSE | Cinematic Movie Discovery</title>
+    <link rel="icon" href="./assets/icons/cineverse-mark.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Bỏ qua đến nội dung chính</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home" aria-label="CINÉVERSE trang chủ">
+          <img src="./assets/icons/cineverse-mark.svg" alt="CINÉVERSE logo" class="brand-icon" />
+          <span class="brand-text">CINÉVERSE</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Điều hướng chính">
+          <a href="#home" class="nav-link active">Trang chủ</a>
+          <a href="#featured" class="nav-link">Phim nổi bật</a>
+          <a href="#discover" class="nav-link">Khám phá</a>
+          <a href="#genres" class="nav-link">Thể loại</a>
+          <a href="#about" class="nav-link">Giới thiệu</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-button favorite-toggle" type="button" aria-label="Xem danh sách yêu thích">
+            ♥ <span class="favorite-count">0</span>
+          </button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Mở menu di động"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a href="#discover" class="btn btn-primary nav-cta">Khám phá phim</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <nav class="mobile-nav" aria-label="Điều hướng di động">
+          <a href="#home" class="nav-link active">Trang chủ</a>
+          <a href="#featured" class="nav-link">Phim nổi bật</a>
+          <a href="#discover" class="nav-link">Khám phá</a>
+          <a href="#genres" class="nav-link">Thể loại</a>
+          <a href="#about" class="nav-link">Giới thiệu</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="home">
+        <div class="hero-carousel" aria-live="polite">
+          <div class="hero-slide is-active" data-slide="0">
+            <div class="hero-backdrop backdrop-interstellar" aria-hidden="true"></div>
+            <div class="hero-gradient" aria-hidden="true"></div>
+          </div>
+          <div class="hero-slide" data-slide="1">
+            <div class="hero-backdrop backdrop-dune" aria-hidden="true"></div>
+            <div class="hero-gradient" aria-hidden="true"></div>
+          </div>
+          <div class="hero-slide" data-slide="2">
+            <div class="hero-backdrop backdrop-oppenheimer" aria-hidden="true"></div>
+            <div class="hero-gradient" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="container hero-content-wrap">
+          <div class="hero-content">
+            <p class="eyebrow animate__animated animate__fadeInUp">WELCOME TO CINÉVERSE</p>
+            <h1 class="animate__animated animate__fadeInDown">KHÁM PHÁ THẾ GIỚI ĐIỆN ẢNH</h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp">
+              Mỗi bộ phim là một cuộc hành trình; mỗi cảnh là một dấu ấn. Khám phá những câu chuyện, cảm xúc
+              và hình ảnh điện ảnh đáng nhớ nhất.
+            </p>
+            <div class="hero-actions animate__animated animate__fadeInUp">
+              <a href="#discover" class="btn btn-primary">Khám phá ngay</a>
+              <a href="#featured" class="btn btn-secondary">Xem phim nổi bật</a>
+            </div>
+            <ul class="hero-meta" aria-label="Thông tin nổi bật">
+              <li><span>120+</span> phim</li>
+              <li><span>16</span> thể loại</li>
+              <li><span>4.9/5</span> trải nghiệm</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Phim đang được giới thiệu">
+            <div class="panel-badge">FEATURED</div>
+            <div class="panel-image-wrap">
+              <img id="heroPoster" src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80" alt="Poster phim Interstellar" />
+            </div>
+            <div class="panel-copy">
+              <p id="heroLabel">Interstellar</p>
+              <span id="heroMeta">2014 · Sci-Fi · Adventure</span>
+            </div>
+            <div class="hero-controls" aria-label="Điều khiển carousel">
+              <button class="carousel-btn" type="button" data-direction="prev" aria-label="Phim trước">←</button>
+              <div class="hero-dots" aria-label="Chọn slide"></div>
+              <button class="carousel-btn" type="button" data-direction="next" aria-label="Phim sau">→</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <section class="featured-section" id="featured">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <p class="eyebrow">PHIM NỔI BẬT</p>
+            <h2>Điều gì làm nên một bộ phim đáng nhớ?</h2>
+          </div>
+
+          <article class="feature-card" data-aos="zoom-in">
+            <figure class="feature-poster">
+              <img
+                src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80"
+                alt="Poster phim Interstellar"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="feature-content">
+              <p class="feature-tag">Sci-Fi • 2014</p>
+              <h3>Interstellar</h3>
+              <div class="feature-meta">
+                <span><strong>Thể loại:</strong> Sci-Fi</span>
+                <span><strong>Thời lượng:</strong> 2h 49m</span>
+                <span><strong>Đạo diễn:</strong> Christopher Nolan</span>
+              </div>
+              <p>
+                Một nhóm phi hành gia lao vào không gian, vượt qua thời gian và nỗi sợ hãi để tìm một hành tinh mới
+                cho nhân loại, nơi những lựa chọn của con người được đặt lên bàn cân của cả vũ trụ.
+              </p>
+              <div class="cta-group">
+                <button class="btn btn-primary" type="button" data-movie-id="interstellar">Xem chi tiết</button>
+                <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank" rel="noopener noreferrer">Xem trailer</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="movie-section" id="discover">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <p class="eyebrow">KHÁM PHÁ ĐIỆN ẢNH</p>
+            <h2>Khám phá theo cảm hứng, thể loại và câu chuyện</h2>
+          </div>
+
+          <div class="filter-bar" data-aos="fade-up">
+            <form class="search-form" role="search">
+              <label class="sr-only" for="movieSearch">Tìm kiếm phim</label>
+              <div class="search-shell">
+                <input id="movieSearch" type="search" name="movieSearch" placeholder="Tìm tên phim..." autocomplete="off" />
+                <button class="search-clear" type="button" aria-label="Xóa tìm kiếm" hidden>×</button>
+              </div>
+            </form>
+
+            <div class="filter-tabs" role="tablist" aria-label="Bộ lọc thể loại phim">
+              <button class="filter-button active" type="button" data-filter="All" aria-pressed="true">Tất cả</button>
+              <button class="filter-button" type="button" data-filter="Sci-Fi" aria-pressed="false">Khoa học viễn tưởng</button>
+              <button class="filter-button" type="button" data-filter="Action" aria-pressed="false">Hành động</button>
+              <button class="filter-button" type="button" data-filter="Drama" aria-pressed="false">Chính kịch</button>
+              <button class="filter-button" type="button" data-filter="Animation" aria-pressed="false">Hoạt hình</button>
+              <button class="filter-button" type="button" data-filter="Thriller" aria-pressed="false">Giật gân</button>
+              <button class="filter-button" type="button" data-filter="Adventure" aria-pressed="false">Phiêu lưu</button>
+            </div>
+          </div>
+
+          <div class="results-toolbar" data-aos="fade-up">
+            <div id="movieStatus" class="movie-status" aria-live="polite"></div>
+            <label class="sort-wrapper">
+              <span>Sắp xếp</span>
+              <select id="sortSelect" aria-label="Sắp xếp phim">
+                <option value="newest">Mới nhất</option>
+                <option value="oldest">Cũ nhất</option>
+                <option value="az">Tên A–Z</option>
+                <option value="za">Tên Z–A</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="movieGrid" class="movie-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="editorial-section">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <p class="eyebrow">EDITOR'S PICKS</p>
+            <h2>Những câu chuyện đáng xem nhất</h2>
+          </div>
+
+          <div class="editorial-grid" data-aos="fade-up">
+            <article class="editorial-card editorial-large">
+              <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80" alt="Interstellar banner" loading="lazy" />
+              <div class="editorial-overlay">
+                <span>Featured</span>
+                <h3>Interstellar</h3>
+              </div>
+            </article>
+            <article class="editorial-card">
+              <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80" alt="Oppenheimer banner" loading="lazy" />
+              <div class="editorial-overlay">
+                <span>Drama</span>
+                <h3>Oppenheimer</h3>
+              </div>
+            </article>
+            <article class="editorial-card">
+              <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=900&q=80" alt="Spirited Away banner" loading="lazy" />
+              <div class="editorial-overlay">
+                <span>Animation</span>
+                <h3>Spirited Away</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="genres-section" id="genres">
+        <div class="container">
+          <div class="section-heading" data-aos="fade-up">
+            <p class="eyebrow">THỂ LOẠI</p>
+            <h2>Khám phá cảm xúc qua từng thể loại</h2>
+          </div>
+
+          <div class="genre-grid" data-aos="zoom-in-up">
+            <button type="button" class="genre-card genre-sci-fi" data-genre="Sci-Fi">
+              <span>SCI-FI</span>
+            </button>
+            <button type="button" class="genre-card genre-action" data-genre="Action">
+              <span>ACTION</span>
+            </button>
+            <button type="button" class="genre-card genre-drama" data-genre="Drama">
+              <span>DRAMA</span>
+            </button>
+            <button type="button" class="genre-card genre-animation" data-genre="Animation">
+              <span>ANIMATION</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-layout">
+          <figure class="about-visual" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=80"
+              alt="Một rạp chiếu phim trong đêm tối"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="about-content" data-aos="fade-left">
+            <p class="eyebrow">VỀ CINÉVERSE</p>
+            <h2>MORE THAN MOVIES. STORIES THAT STAY WITH US.</h2>
+            <p>
+              CINÉVERSE là nơi bạn cùng đắm chìm trong những câu chuyện có sức nặng cảm xúc, những không gian đậm chất điện ảnh và
+              những bộ phim để lại dấu ấn lâu dài sau khi màn hình tối đi.
+            </p>
+            <p>
+              Chúng tôi tin rằng điện ảnh không chỉ cho bạn xem, mà còn giúp bạn cảm nhận, suy ngẫm và kết nối với những trải nghiệm
+              đáng nhớ cùng khán giả trên toàn thế giới.
+            </p>
+            <ul class="about-points">
+              <li>Khám phá theo cảm hứng và thể loại.</li>
+              <li>Trải nghiệm điện ảnh theo phong cách editorial.</li>
+              <li>Hệ thống bộ lọc, tìm kiếm và yêu thích giúp việc khám phá trở nên dễ dàng hơn.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#home" aria-label="CINÉVERSE home">
+            <img src="./assets/icons/cineverse-mark.svg" alt="CINÉVERSE logo" class="brand-icon" />
+            <span class="brand-text">CINÉVERSE</span>
+          </a>
+          <p>
+            Một không gian khám phá phim điện ảnh với phong cách cinematic, tối giản và trực quan dành cho người yêu điện ảnh.
+          </p>
+        </div>
+
+        <div>
+          <h3>Điều hướng</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#featured">Phim nổi bật</a></li>
+            <li><a href="#discover">Khám phá</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Website</h3>
+          <ul class="footer-links">
+            <li><a href="#genres">Thể loại</a></li>
+            <li><a href="#discover">Tìm kiếm phim</a></li>
+            <li><span>Dự án học tập</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CINÉVERSE. Dự án học tập, không phải nền tảng phát hành phim chính thức.</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="movieModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-dialog" role="document">
+        <button class="modal-close" type="button" aria-label="Đóng cửa sổ thông tin phim">×</button>
+        <div class="modal-content">
+          <img id="modalPoster" src="" alt="Poster phim" />
+          <div class="modal-body">
+            <p id="modalGenre" class="modal-genre"></p>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-meta">
+              <span id="modalYear"></span>
+              <span id="modalRuntime"></span>
+              <span id="modalDirector"></span>
+            </div>
+            <p id="modalDescription"></p>
+            <div class="modal-actions">
+              <a id="modalTrailer" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Xem trailer</a>
+              <button id="modalFavorite" class="btn btn-secondary" type="button">Yêu thích</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
